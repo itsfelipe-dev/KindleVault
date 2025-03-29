@@ -5,12 +5,15 @@ import typography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './vendor/laravel/jetstream/**/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-    ],
-
+		'./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+		 './vendor/laravel/jetstream/**/*.blade.php',
+		 './storage/framework/views/*.php',
+		 './resources/views/**/*.blade.php',
+		 "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
+	],
+	daisyui: {
+		themes: ["light", "dark", "cupcake"],
+	},
     theme: {
         extend: {
             fontFamily: {
@@ -19,5 +22,9 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+		forms,
+		typography,
+		require("daisyui")
+	],
 };
