@@ -1,0 +1,14 @@
+created:
+    - database/factories/HighlightFactory.php
+    - database/factories/NoteFactory.php
+    - database/factories/BookFactory.php
+    - database/migrations/2025_03_29_011327_create_highlights_table.php
+    - database/migrations/2025_03_29_011328_create_notes_table.php
+    - database/migrations/2025_03_29_011329_create_books_table.php
+    - app/Models/Highlight.php
+    - app/Models/Note.php
+    - app/Models/Book.php
+models:
+    Highlight: { text: longtext, location: text, chapter: string, color: 'string nullable', is_favorite: 'boolean default:false', clipped_at: 'timestamp nullable', book_id: unsignedInteger, user_id: unsignedInteger, deleted_at: 'timestamp nullable', relationships: { belongsTo: 'User, Book', hasOne: Note } }
+    Note: { text: 'longtext nullable', deleted_at: 'timestamp nullable', relationships: { belongsTo: Highlight } }
+    Book: { author: string, title: string, cover_url: 'string nullable', release_date: 'date nullable', relationships: { hasMany: Highlight } }

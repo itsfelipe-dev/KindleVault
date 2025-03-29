@@ -1,0 +1,30 @@
+models:
+  Highlight:
+    text: longtext
+    location: text
+    chapter: string
+    color: string nullable
+    is_favorite: boolean default:false
+    clipped_at: timestamp nullable
+    book_id: unsignedInteger
+    user_id: unsignedInteger
+    deleted_at: timestamp nullable
+    relationships:
+      belongsTo: User, Book
+      hasOne: Note
+
+  Note:
+    text: longtext nullable
+    deleted_at: timestamp nullable
+    relationships:
+      belongsTo: Highlight
+
+  Book:
+    author: string
+    title: string
+    cover_url: string nullable
+    release_date: date nullable
+    relationships:
+      hasMany: Highlight
+
+
