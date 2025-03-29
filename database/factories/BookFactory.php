@@ -23,7 +23,7 @@ class BookFactory extends Factory
         return [
             'author' => fake()->word(),
             'title' => fake()->sentence(4),
-            'cover_url' => fake()->word(),
+            'cover_url' => fake()->imageUrl(),
             'release_date' => fake()->date(),
         ];
     }

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Book;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -19,8 +21,8 @@ return new class extends Migration
             $table->string('color')->nullable();
             $table->boolean('is_favorite')->default(false);
             $table->timestamp('clipped_at')->nullable();
-            $table->foreignId('book_id');
-            $table->foreignId('user_id');
+            $table->foreignIdFor(Book::class);
+            $table->foreignIdFor(User::class);
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

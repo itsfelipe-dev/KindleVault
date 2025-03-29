@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Highlight;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->longText('text')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            $table->foreignId('highlight_id');
+            $table->foreignIdFor(Highlight::class);
             $table->timestamps();
         });
     }
