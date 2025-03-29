@@ -22,7 +22,7 @@ return new class extends Migration
             $table->boolean('is_favorite')->default(false);
             $table->timestamp('clipped_at')->nullable();
             $table->foreignIdFor(Book::class);
-            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

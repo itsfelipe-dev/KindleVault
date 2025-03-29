@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->longText('text')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            $table->foreignIdFor(Highlight::class);
+            $table->foreignIdFor(Highlight::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
