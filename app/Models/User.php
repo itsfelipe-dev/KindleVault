@@ -64,4 +64,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function smtpCredentials()
+    {
+        return $this->hasOne(SmtpCredential::class);
+    }
+    public function highlights()
+    {
+        return $this->hasMany(Highlight::class);
+    }
 }
