@@ -2,7 +2,7 @@
     <x-slot name="header">👋 Hello, {{ Auth::user()->name }}!
     </x-slot>
 
-<div>
+{{-- <div> --}}
 
 
 {{--
