@@ -9,9 +9,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     @livewireStyles
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -112,9 +113,9 @@
         </x-slot:sidebar>
 
         <!-- Content Area -->
-        <x-slot:content class="w-full">
+        <x-slot:content >
 
-            <x-mary-card>
+            <x-mary-card class="w-full h-screen">
                 @if (isset($header))
                     <x-mary-header :title="$header" :subtitle="$subtitle ?? null" separator class="font-serif " />
                 @endif
@@ -128,26 +129,28 @@
     <x-mary-nav sticky class="fixed mx-5 shadow-2xl bottom-2 rounded-2xl lg:hidden bg-base-200 ">
         <x-slot:actions class="grid h-full max-w-lg grid-cols-5 mx-auto">
 
-             <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center hover:bg-gray-50 group">
-                    <x-heroicon-o-home class="w-6 h-6 text-gray-500 hover:text-gray-50 " />
-                    <span class="text-sm text-gray-500 dark:text-gray-400 ">Home</span>
-                </a>
-             <a href="{{ route('books.index') }}" class="inline-flex flex-col items-center justify-center hover:bg-gray-50 group">
-                    <x-heroicon-o-book-open class="w-6 h-6 text-gray-500 hover:text-gray-50 " />
-                    <span class="text-sm text-gray-500 dark:text-gray-400 ">Books</span>
-                </a>
-              <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center">
-                    <x-heroicon-o-heart class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                    <span class="text-sm text-gray-500 dark:text-gray-400 ">Favorite</span>
-                </a>
-               <a href="{{ route('highlights.upload') }}" class="inline-flex flex-col items-center justify-center">
-                    <x-heroicon-o-arrow-up-tray class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                    <span class="text-sm text-gray-500 dark:text-gray-400 ">Upload</span>
-                </a>
-                <a href="{{ route('profile.show') }}" class="inline-flex flex-col items-center justify-center">
-                    <x-heroicon-o-user-circle class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                    <span class="text-sm text-gray-500 dark:text-gray-400 ">Profile</span>
-                </a>
+            <a href="{{ route('dashboard') }}"
+                class="inline-flex flex-col items-center justify-center group">
+                <x-heroicon-o-home class="w-6 h-6 text-gray-500 hover:text-gray-50 " />
+                <span class="text-sm text-gray-500 dark:text-gray-400 ">Home</span>
+            </a>
+            <a href="{{ route('books.index') }}"
+                class="inline-flex flex-col items-center justify-center group">
+                <x-heroicon-o-book-open class="w-6 h-6 text-gray-500 hover:text-gray-50 " />
+                <span class="text-sm text-gray-500 dark:text-gray-400 ">Books</span>
+            </a>
+            <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center">
+                <x-heroicon-o-heart class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                <span class="text-sm text-gray-500 dark:text-gray-400 ">Favorite</span>
+            </a>
+            <a href="{{ route('highlights.upload') }}" class="inline-flex flex-col items-center justify-center">
+                <x-heroicon-o-arrow-up-tray class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                <span class="text-sm text-gray-500 dark:text-gray-400 ">Upload</span>
+            </a>
+            <a href="{{ route('profile.show') }}" class="inline-flex flex-col items-center justify-center">
+                <x-heroicon-o-user-circle class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                <span class="text-sm text-gray-500 dark:text-gray-400 ">Profile</span>
+            </a>
 
 
         </x-slot:actions>
