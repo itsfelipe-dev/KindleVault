@@ -5,27 +5,25 @@ import typography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: 'class',
-    content: [
+	content: [
 		'./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-		 './vendor/laravel/jetstream/**/*.blade.php',
-		 './storage/framework/views/*.php',
-		 './resources/views/**/*.blade.php',
-		 "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
+		'./vendor/laravel/jetstream/**/*.blade.php',
+		'./storage/framework/views/*.php',
+		'./resources/views/**/*.blade.php',
+		"./vendor/robsontenorio/mary/src/View/Components/**/*.php"
 	],
 	daisyui: {
-		themes: ["cupcake", "dracula"],
+		themes: ["wireframe", "dracula"],
 	},
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
-    },
+	theme: {
+		fontFamily: {
+			sans: ['Raleway', ...defaultTheme.fontFamily.serif],
+		},
+	},
 
-    plugins: [
+	plugins: [
 		forms,
 		typography,
-		require("daisyui")
+		require("daisyui"),
 	],
 };
