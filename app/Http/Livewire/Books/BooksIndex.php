@@ -26,8 +26,11 @@ class BooksIndex extends Component
 
     public function mount()
     {
-
-        $this->books = Book::orderBy('updated_at', 'desc')->get();
+        $this->books = Book::whereHas('highlights', function ($query) {
+            $query->where('user_id', auth()->id());
+        })
+            ->orderBy('updated_at', 'desc')
+            ->get();
     }
 
     public function render()
