@@ -96,13 +96,14 @@ class HighlightUpload extends Component
 
             // Save highlights
             foreach ($highlights as $highlightData) {
-                Highlight::create([
+                Highlight::firstOrCreate([
                     'text' => $highlightData['text'],
+                    'book_id' => $book->id,
+                    'user_id' => Auth::id(),
+                ], [
                     'location' => $highlightData['location'],
                     'chapter' => $highlightData['section'],
                     'color' => $highlightData['color'],
-                    'book_id' => $book->id,
-                    'user_id' => Auth::id(),
                 ]);
             }
 
