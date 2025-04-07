@@ -26,9 +26,12 @@ class SendDailyHighlightEmail implements ShouldQueue
             $smtpCredentials = $user->smtpCredentials;
 
 
-            $highlight = $user->highlights()->inRandomOrder()->first();
+            $highlight = $user->highlights()
+                ->whereRaw('LENGTH(text) > 20')
+                ->inRandomOrder()
+                ->first();
             $bookDetails = $highlight->book;
-    
+
             if (!$highlight) {
                 Log::warning("No highlight found for user {$user->email}");
                 continue;
