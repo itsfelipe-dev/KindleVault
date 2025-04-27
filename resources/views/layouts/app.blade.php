@@ -125,32 +125,32 @@
         </x-slot:content>
 
     </x-mary-main>
- <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
-    <x-mary-nav class="mx-5 mb-2 shadow-2xl rounded-2xl bg-base-200">
-        <x-slot:actions class="grid h-full max-w-lg grid-cols-5 mx-auto">
-            <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center group">
-                <x-heroicon-o-home class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                <span class="text-sm text-gray-500 dark:text-gray-400">Home</span>
-            </a>
-            <a href="{{ route('books.index') }}" class="inline-flex flex-col items-center justify-center group">
-                <x-heroicon-o-book-open class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                <span class="text-sm text-gray-500 dark:text-gray-400">Books</span>
-            </a>
-            <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center">
-                <x-heroicon-o-heart class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                <span class="text-sm text-gray-500 dark:text-gray-400">Favorite</span>
-            </a>
-            <a href="{{ route('highlights.upload') }}" class="inline-flex flex-col items-center justify-center">
-                <x-heroicon-o-arrow-up-tray class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                <span class="text-sm text-gray-500 dark:text-gray-400">Upload</span>
-            </a>
-            <a href="{{ route('profile.show') }}" class="inline-flex flex-col items-center justify-center">
-                <x-heroicon-o-user-circle class="w-6 h-6 text-gray-500 hover:text-gray-50" />
-                <span class="text-sm text-gray-500 dark:text-gray-400">Profile</span>
-            </a>
-        </x-slot:actions>
-    </x-mary-nav>
-</div>
+    <div class="fixed left-0 right-0 z-50 bottom-2 lg:hidden">
+        <x-mary-nav class="mx-5 mb-2 shadow-2xl rounded-2xl bg-base-200">
+            <x-slot:actions class="grid h-full max-w-lg grid-cols-5 mx-auto">
+                <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center group">
+                    <x-heroicon-o-home class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Home</span>
+                </a>
+                <a href="{{ route('books.index') }}" class="inline-flex flex-col items-center justify-center group">
+                    <x-heroicon-o-book-open class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Books</span>
+                </a>
+                <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center justify-center">
+                    <x-heroicon-o-heart class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Favorite</span>
+                </a>
+                <a href="{{ route('highlights.upload') }}" class="inline-flex flex-col items-center justify-center">
+                    <x-heroicon-o-arrow-up-tray class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Upload</span>
+                </a>
+                <a href="{{ route('profile.show') }}" class="inline-flex flex-col items-center justify-center">
+                    <x-heroicon-o-user-circle class="w-6 h-6 text-gray-500 hover:text-gray-50" />
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Profile</span>
+                </a>
+            </x-slot:actions>
+        </x-mary-nav>
+    </div>
 
 
     @stack('modals')
