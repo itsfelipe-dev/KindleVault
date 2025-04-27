@@ -4,13 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Books\BooksIndex;
 use App\Http\Livewire\Books\BooksShow;
 use App\Http\Livewire\Highlights\HighlightShow;
-
-use App\Http\Livewire\Books\Show;
-use App\Http\Livewire\Books\Create;
 use App\Http\Livewire\Highlights\HighlightUpload;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('dashboard');
 });
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
