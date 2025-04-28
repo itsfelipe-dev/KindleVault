@@ -6,7 +6,6 @@ Tool that allows users to upload their Kindle highlights, receive daily notifica
 ## 🚀 Features
 
 * **📥 Kindle Highlight Upload:** Easily import your Kindle highlights from HTML files.
-
 ![Highlight Upload](https://github.com/itsfelipe-dev/KindleVault/blob/main/docs/assets/upload_highlight.png?raw=true)
 
 * **📚 Book and Highlight Viewing:** Browse and review your highlights organized by book.
@@ -16,7 +15,8 @@ Tool that allows users to upload their Kindle highlights, receive daily notifica
 * **⏰ Scheduled Email Notifications:** Receive daily email digests of your highlights at configured times.  
 ![Email Notifications](https://github.com/itsfelipe-dev/KindleVault/blob/main/docs/assets/email_notification.png?raw=true)
 
-> [!QUOTE]
+> **✨ Quote**
+>
 > "To read without reflecting is like eating without digesting."
 — **Edmund Burke**
 
